@@ -12,8 +12,8 @@ public final class Constants {
     // HEADING Elements
     public static final String LOGO_HEADING = "//h1[@id='logo']";
     public static final String TEST_HEADING = "//h1[contains(text(),'test')]";
-    public static final String NEW_TEST_HEADING = "//*[@id=\"dashboard-content\"]/div[1]/div/div[1]/h1";
-
+    public static final String NEW_TEST_HEADING = "/html/body/div[1]/div/div[2]/dashboard/div[1]/div/div[1]/div/div[1]/h1";
+    public static final String DASHBOARD_HEADING = "/html/body/div[1]/div/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]/div/div/div/div[2]/a/div[1]/span";
     // ANCHOR Elements
     public static final String FIRST_PROJECTS_ANCHOR = "//img[contains(@src, 'projectavatar')]/following-sibling::a";
 
@@ -45,10 +45,15 @@ public final class Constants {
     public static final String BOARDS_SEARCH_PREVIEW_DIV = "//div[@aria-label='Boards']";
     public static final String PROJECTS_SEARCH_PREVIEW_DIV = "//div[@aria-label='Projects']";
 
-    public static final String ISSUES_AND_FILTERS_DIV = "//*[@id='navigation-app']/div[1]/div[1]/div[1]/div[2]/div/div/div[2]/div/div/div/div[3]/a/div[2]/div";
-    public static final String DASHBOARD_DIV = "//*[@id=\"navigation-app\"]/div[1]/div[1]/div[1]/div[2]/div/div/div[2]/div/div/div/div[1]/a/div[2]/div";
+    public static final String ISSUES_AND_FILTERS_DIV = "/html/body/div[1]/div/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]/div/div/div/div[5]/a/div[2]/div";
+    public static final String DASHBOARD_DIV = "/html/body/div[1]/div/div[1]/div/div/div[2]/div[1]/div[1]/div[2]/div/div/div[2]/div/div/div/div[2]/a/div[2]/div";
     public static final String PROJECTS_DIV = "//*[@id=\"jira-frontend\"]/div[1]/div[1]/div[1]/div[2]/div/div/div[2]/div/div/div/div[2]/a/div[2]/div";
-
+    public static final String CREATE_ISSUE = "/html/body/div[1]/div/div[1]/div/div/div[2]/div[1]/div[1]/div[1]/span/div/div[1]/span[3]/div/div/div/div/button";
+    public static final String JIRA_DIALOG_HEADING = "//*[@id=\"create-issue-dialog\"]/div[1]";
+    public static final String JIRA_STORY_SUMMARY_INPUT = "/html/body/div[10]/div[2]/div[1]/div/form/div[1]/div[2]/div[1]/input";
+    public static final String JIRA_STORY_DESCRIPTION = "/html/body/div[10]/div[2]/div[1]/div/form/div[1]/div[2]/div[4]/div/div[1]/div[9]/textarea";
+    public static final String JIRA_STORY_CREATE = "/html/body/div[10]/div[2]/div[1]/div/form/div[2]/div/input";
+    public static final String EXPAND = "/html/body/div[1]/div/div[1]/div/div/div[2]/div[1]/div[2]/div[2]/div/button/div";
     private Constants() {
     }
 

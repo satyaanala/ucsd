@@ -45,9 +45,15 @@ public abstract class JiraTestCase extends WebTestCase {
             webAction(Constants.CONTINUE_SPAN);
             executeJavascript(combine(JavascriptConstants.ENTER_VALUE_ELEMENT_BY_XPATH, Constants.PASSWORD_INPUT, getCredentials().getPassword()));
             webAction(Constants.LOGIN_SPAN);
-            webElementVisible(Constants.TEST_HEADING);
+            webElementVisible(Constants.NEW_TEST_HEADING);
         }
 
+    }
+
+    public void createStory() {
+        executeJavascript(combine(JavascriptConstants.ENTER_VALUE_ELEMENT_BY_XPATH, Constants.JIRA_STORY_SUMMARY_INPUT, "Satya Anala jira story"));
+        executeJavascript(combine(JavascriptConstants.ENTER_VALUE_ELEMENT_BY_XPATH, Constants.JIRA_STORY_DESCRIPTION, "UCSD create story assignment"));
+        webAction(Constants.JIRA_STORY_CREATE);
     }
 
     @BeforeMethod(firstTimeOnly = true)

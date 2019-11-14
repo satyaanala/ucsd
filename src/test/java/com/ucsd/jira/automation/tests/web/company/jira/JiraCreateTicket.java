@@ -15,7 +15,7 @@ import static com.pwc.logging.service.LoggerService.THEN;
 import static com.pwc.logging.service.LoggerService.WHEN;
 
 
-public class BasicTest extends JiraTestCase {
+public class JiraCreateTicket extends JiraTestCase {
 
     @Override
     public void beforeMethod() {
@@ -27,24 +27,24 @@ public class BasicTest extends JiraTestCase {
 
     @Issue("STORY-1234")
     @Test(retryAnalyzer = Retry.class, groups = {Groups.ACCEPTANCE_TEST})
-    public void testBasic() {
+    public void createJiraStory() {
 
-        FEATURE("Basic Jira Test sneak developer");
-        SCENARIO("User logs in and validates basic navigation functionality");
+        FEATURE("To create jirastory");
+        SCENARIO("User logs in and creats jira story");
 
-        GIVEN("I am a valid user");
-        webElementVisible(Constants.NEW_TEST_HEADING);
+        GIVEN("I am a valid" +
+                " user");
 
-        WHEN("I navigate with the left menu");
-      //  webAction(Constants.EXPAND);
-        webAction(Constants.ISSUES_AND_FILTERS_DIV);
+        WHEN("When I click on create");
+        webAction(Constants.CREATE_ISSUE);
+        webElementVisible(Constants.JIRA_DIALOG_HEADING);
+        createStory();
+
+        THEN("Check story is created");
         redirect(Constants.HOME_URL);
 
-        THEN("The expected pages are displayed");
-        webAction(Constants.DASHBOARD_DIV);
-
-        redirect(Constants.HOME_URL);
 
     }
 
 }
+
